@@ -1,0 +1,8 @@
+Listening on 127.0.0.1:7778 without SSL
+Listening on 0.0.0.0:7778 without SSL
+Listening on 0.0.0.0:7778 without SSL
+irc_connection error (irc.freenode.net): { [Error: connect ETIMEDOUT] code: 'ETIMEDOUT', errno: 'ETIMEDOUT', syscall: 'connect' }
+Listening on 0.0.0.0:7778 without SSL
+Listening on 0.0.0.0:7778 without SSL
+Listening on 0.0.0.0:7778 without SSL
+Error listening on 0.0.0.0:5001: EADDRINUSE
