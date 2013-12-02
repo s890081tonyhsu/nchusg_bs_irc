@@ -194,7 +194,7 @@ html, body { height:100%; }
  * Server selection dialog
  */
 #kiwi .server_select { position:relative; width:320px; margin:0 auto; overflow:hidden; }
-#kiwi .server_select.initial { margin-top: 3em; height:100%; width:80%!important;}
+#kiwi .server_select.initial { margin-top: 3em; overflow-y:scroll;}
 #kiwi .server_select .more { display: none; }
 #kiwi .server_select button {  }
 #kiwi .server_select input { }
