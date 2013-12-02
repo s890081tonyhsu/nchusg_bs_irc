@@ -1,6 +1,8 @@
 function toggleIntroduction(){
-	$('#discription').toggle();
-	$('#introduction').toggle();
+	$('#details').click(function(){
+		$('#discription').toggle();
+		$('#introduction').toggle();
+	});
 }
 
-
+$(document).ready(toggleIntroduction());
