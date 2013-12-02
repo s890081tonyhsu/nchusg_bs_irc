@@ -1,4 +1,4 @@
 function toggleIntroduction(){
-	$('#description').toggle();
-	$('#introduction').toggle();
+	$('#description').slideToggle();
+	$('#introduction').slideToggle();
 }
