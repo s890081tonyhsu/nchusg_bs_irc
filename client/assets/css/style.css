@@ -6,7 +6,11 @@ html, body { height:100%; }
 /* Few resets for within the kiwi container */
 #kiwi {
     overflow:hidden; position:relative;
-    height:100%;
+    height: -moz-calc(100% - 51px);
+	height: -webkit-calc(100% - 51px);
+	height: -o-calc(100% - 51px);
+	height: calc(100% - 51px);
+	top: 51px;
 }
 #kiwi * { margin:0px; padding:0px; }
 #kiwi p { margin:0.5em 0; }
@@ -804,7 +808,7 @@ html, body { height:100%; }
 #kiwi.theme_relaxed .server_select label { }
 #kiwi.theme_relaxed .server_select br { clear:both; }
 #kiwi.theme_relaxed .server_select .basic input, .server_select .basic button { font-size:1em; padding:0.5em 1em; }
-#kiwi.theme_relaxed .server_select .basic input { width:170px; }
+#kiwi.theme_relaxed .server_select .basic input { width:200px; }
 #kiwi.theme_relaxed .server_select .basic label { font-size:1.3em; margin-top:4px; }
 #kiwi.theme_relaxed .server_select .basic tr.have_pass { font-size:0.8em; }
 #kiwi.theme_relaxed .server_select .basic tr.have_key { font-size:0.8em; }
