@@ -1,3 +1,5 @@
+var Month = Array("","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+
 function fetchJson(HOST, DIR) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -8,9 +10,19 @@ function fetchJson(HOST, DIR) {
         }
     }
 
-    var dateList = Date().toString().split(" ");
-    var filename = dateList[1] + "-" + parseInt(dateList[2]) + "-" + dateList[3];
-    var url = HOST + DIR + filename + ".json";
+    //var dateList = Date().toString().split(" ");
+    //var filename = dateList[1] + "-" + parseInt(dateList[2]) + "-" + dateList[3];
+  	if(location.hash.length!=0){
+		var dateList = location.hash.substr(1).split("-");
+		var filename = Month[dateList[1]] + "-" + parseInt(dateList[2]) + "-" + dateList[0];
+		
+	}else{
+		var dateList = Date().toString().split(" ");
+		var filename = dateList[1] + "-" + parseInt(dateList[2]) + "-" + dateList[3];
+	}
+
+
+	var url = HOST + DIR + filename + ".json";
 
     xhr.open("GET", url, false);
     xhr.send();
@@ -27,9 +39,16 @@ function loadJson() {
 
     var data = fetchJson("http://irc.nchusg.org/logbot", "/static/data/" + channel + "/");
     var dataLen = data.length;
+	
 
-    var dateList = Date().toString().split(" ");
-    var filename = dateList[1] + "-" + parseInt(dateList[2]) + "-" + dateList[3];
+	if(location.hash.length!=0){
+		var dateList = location.hash.substr(1).split("-");
+		var filename = Month[dateList[1]] + "-" + parseInt(dateList[2]) + "-" + dateList[0];
+		
+	}else{
+		var dateList = Date().toString().split(" ");
+		var filename = dateList[1] + "-" + parseInt(dateList[2]) + "-" + dateList[3];
+	}
 
     document.getElementById("channel").innerHTML = "#" + channel;
     document.getElementById("date").innerHTML = filename;
