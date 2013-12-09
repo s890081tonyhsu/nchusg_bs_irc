@@ -3,12 +3,24 @@
     <head>
         <title>NCHU SG LOGBOT</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" type="text/css" href="static/css/styles.css">
-        <script type="text/javascript" charset="UTF-8" src="static/js/parser.js"></script>
+		<script src="http://res.nchusg.org/js/jquery-1.10.2.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script>
+			$(function() {
+				$( "#datepicker" ).datepicker();
+			});
+		</script> 
+		<link rel="stylesheet" type="text/css" href="static/css/styles.css">
+		<script type="text/javascript" charset="UTF-8" src="static/js/datachange.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="static/js/parser.js"></script>
     </head>
     <body onload="loadJson();timer;">
         <div id="header"><h1>LOGBOT</h1></div>
-
+		<div id="change_date">
+			<input type="text" id="datepicker">
+			<button onclick="setDateButton();">Submit</button>
+		</div>
         <div id="container">
             <div id="info">
                 <p id="channel"></p>

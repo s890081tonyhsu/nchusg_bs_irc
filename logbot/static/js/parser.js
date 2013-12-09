@@ -44,11 +44,14 @@ function loadJson() {
 	if(location.hash.length!=0){
 		var dateList = location.hash.substr(1).split("-");
 		var filename = Month[dateList[1]] + "-" + parseInt(dateList[2]) + "-" + dateList[0];
-		
 	}else{
 		var dateList = Date().toString().split(" ");
 		var filename = dateList[1] + "-" + parseInt(dateList[2]) + "-" + dateList[3];
 	}
+
+	var displayDate = filename.split("-");
+	
+	$('#datepicker').attr("placeholder",jQuery.inArray(displayDate[0],Month)+"/" + displayDate[1] + "/" + displayDate[2]);
 
     document.getElementById("channel").innerHTML = "#" + channel;
     document.getElementById("date").innerHTML = filename;

@@ -60,3 +60,9 @@ body {
     line-height: 20px;
     word-break: break-all;
 }
+
+#change_date{
+	margin: 0px auto;
+	width:200px;
+	padding-top:30px;
+}
