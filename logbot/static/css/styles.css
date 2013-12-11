@@ -63,6 +63,11 @@ body {
 
 #change_date{
 	margin: 0px auto;
-	width:200px;
+	width:30%;
 	padding-top:30px;
+}
+
+#change_date > p {
+	color:white;
+	float:left;
 }

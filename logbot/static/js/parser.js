@@ -35,7 +35,7 @@ function fetchJson(HOST, DIR) {
 
 
 function loadJson() {
-    var channel = "nchusg.it";
+    var channel = "nchu.tw";
 
     var data = fetchJson("http://irc.nchusg.org/logbot", "/static/data/" + channel + "/");
     var dataLen = data.length;

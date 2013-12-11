@@ -62,7 +62,7 @@ class LogBot():
         with open("{0}.log".format(filename), "r") as logFile:
             ele = ['time', 'name', 'content']
             line = logFile.readlines()[-1].split(" ", 2)
-            result = {ele[i]: line[i].strip() for i in range(3)}
+        result = {ele[i]: line[i].strip() for i in range(3)}
 
         jsonFile = open("{0}.json".format(filename), "a")
         jsonData = json.dumps(result, ensure_ascii=False)
@@ -73,7 +73,7 @@ class LogBot():
 if __name__ == "__main__":
     HOST = "irc.freenode.org"
     PORT = 6667
-    CHANNEL = "#nchusg.it"
+    CHANNEL = "#nchu.tw"
     NICKNAME = "SG_Bot"
     IDENTITY = "sg_bot"
     REALNAME = "SG BOT"
