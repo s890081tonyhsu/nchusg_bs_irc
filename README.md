@@ -1,14 +1,14 @@
-### Kiwi IRC - A hand-crafted IRC client
-Kiwi IRC is a fully featured IRC client that can be extended to suit almost any needs.
-Using the web application is extremly simple even without any IRC knowledge as all the common needs are built directly into the UI.
+### NCHU - IRC Client and logbot
 
-For more information see https://kiwiirc.com or live instance of the application can be found at https://kiwiirc.com/client/.
-Our development IRC channel is on the Freenode network, irc.freenode.net #kiwiirc.
+This IRC Client is settled by the environment KiwiIRC, now this is worked on http://irc.nchusg.org .
 
-**Developing? Please use the development branch - not the master branch!**
+In rule, we will only setup the discrition and some theme edit, out config is settled up on first commit. 
 
-[![Visit our IRC channel](https://kiwiirc.com/buttons/irc.freenode.net/kiwiirc.png)](https://kiwiirc.com/client/irc.freenode.net/#kiwiirc)
+The environment we have: 
 
+1. NodeJS - the environment of KiwiIRC
+
+2. Nginx - to link between the subdomain and the port, and doing some security for our server.
 
 ### Installation
 
@@ -26,11 +26,36 @@ Our development IRC channel is on the Freenode network, irc.freenode.net #kiwiir
 
     `$ cp config.example.js config.js`
 
-    `$ nano config.js`
+    `$ vim config.js`
 
 4.  Make sure the client code is built:
 
     `$ ./kiwi build`
+    
+    **If you do really change the setting or edit the file in folder "client", you should run it again to make sure the file is update.**
+    
+    Here are the files which will be built, so edit them seems not work.
+    
+    1.  Built index.html
+    2.  Built engine.io.bundle.js
+    3.  Built engine.io.bundle.min.js
+    4.  Built kiwi.js
+    5.  Built kiwi.min.js
+    6.  Built translation file de-de.json
+    7.  Built translation file es-419.json
+    8.  Built translation file fr.json
+    9.  Built translation file it.json
+    10. Built translation file en-gb.json
+    11. Built translation file no.json
+    12. Built translation file pt-br.json
+    13. Built translation file he.json
+    14. Built translation file ru.json
+    15. Built translation file ro.json
+    16. Built translation file nl.json
+    17. Built translation file vi.json
+    18. Built translation file tr.json
+    19. Built translation file zh-tw.json
+
 
 
 ### Running
@@ -38,16 +63,6 @@ From the source folder: `$ ./kiwi start`
 
 You can also run kiwi in the foreground to see any output by using the `-f` flag. Eg: `$ ./kiwi -f`
 
-Open your new Kiwi instance in your browser. By default: http://localhost:7778/
+Our Setting is let NodeJS listen on 5001 port
 
-
-### Bugs
-Report bugs using the issue tracker on github: https://github.com/prawnsalad/KiwiIRC/issues
-
-### Licence
-GNU Affero
-http://www.gnu.org/licenses/agpl.html
-
-
-### Thanks to
-The KiwiIRC logo credited to Michael Drahony (www.drahony.com)
+Open your new Kiwi instance in your browser. By default: http://localhost:5001/
