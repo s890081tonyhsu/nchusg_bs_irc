@@ -1,4 +1,5 @@
 var Month = Array("","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+//var re = new RegExp([\x0-\x1F]);
 
 function fetchJson(HOST, DIR) {
     var xhr = new XMLHttpRequest();
@@ -70,8 +71,10 @@ function loadJson() {
     ele = ['time', 'name', 'content'];
     for (i = lastLine; i < dataLen; i++) {
         msg = "<li class='msg' id='" + i + "'>";
-        for (j = 0; j < 3; j++) {
-            msg += "<span class='" + ele[j] + "'>" + data[i][ele[j]] + "</span>";
+        data[i][ele[2]] = data[i][ele[2]].replace(/\ACTION/ig,data[i][ele[1]]);
+		if(data[i][ele[2]].search(data[i][ele[1]])!=-1)data[i][ele[1]]="*";
+		for (j = 0; j < 3; j++) {
+            msg += "<span class='" + ele[j] + "'>" + data[i][ele[j]].replace(/\u0001/ig,"") + "</span>";
         }
         msg += "</li>";
         logs.innerHTML += msg;
