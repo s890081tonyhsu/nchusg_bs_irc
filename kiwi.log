@@ -6,3 +6,4 @@ Listening on 0.0.0.0:7778 without SSL
 Listening on 0.0.0.0:7778 without SSL
 Listening on 0.0.0.0:7778 without SSL
 Error listening on 0.0.0.0:5001: EADDRINUSE
+Error listening on 0.0.0.0:5001: EADDRINUSE
