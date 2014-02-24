@@ -10,6 +10,10 @@ The environment we have:
 
 2. Nginx - to link between the subdomain and the port, and doing some security for our server.
 
+   Apache - if you can setup the mod_proxy, you can tell us.
+
+3. Python - to log down the irc
+
 ### Installation
 
 *Note: This requires Node.js to run. Make sure you have installed Node.js first! http://nodejs.org/download/*
@@ -56,7 +60,29 @@ The environment we have:
     18. Built translation file tr.json
     19. Built translation file zh-tw.json
 
+----
 
+If you want to log the irc content, you need to run python code.
+
+1. Make sure your python version is 3 (or better).
+
+2. open the file ./logbot/static/data/nchuLogBot.py
+
+   you can change the filename to the name you want.
+
+3. edit the CHANNEL, NICKNAME, IDENTIFY and REALNAME.
+
+4. Use your python3 program to run the code.
+
+if you do all the steps, the program will create a folder name the channel you give, then, you need to change the js to let it show on web.
+
+1. open the file ./logbot/static/js/parser.js
+
+2. edit the variable channel in function loadjson()
+
+3. open the browser after you run the nodejs.
+
+Then, open the url http://localhost:port/logbot/ , it will show the log on that day.
 
 ### Running
 From the source folder: `$ ./kiwi start`
